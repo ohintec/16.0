@@ -26,7 +26,7 @@
         'views/views.xml',
         'views/report_layout_inherit.xml',
     ],
-    'images': ['static/description/cover_image.png'],
+    'images': ['static/description/cover_image.png', 'static/description/Hintegration.png','static/description/invoice.png ', 'static/description/bannar.jpeg'],
 
     'price': '5.00',
 
