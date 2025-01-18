@@ -35,5 +35,5 @@
 
     'license': 'AGPL-3',
 
-     'live_test_url': 'http://demo.net2do.com',
+     'live_test_url': 'demo.net2do.com',
 }
