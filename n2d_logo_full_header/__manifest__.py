@@ -25,12 +25,7 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/report_layout_inherit.xml',
-        'static/description/index.html',
     ],
-    'images': ['static/description/cover_image.png',
-               'static/description/Hintegration.png',
-               'static/description/invoice.png ',
-               'static/description/bannar.jpeg'],
 
     'price': '5.00',
 
