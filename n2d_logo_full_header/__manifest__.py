@@ -25,7 +25,7 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/report_layout_inherit.xml',
-        'static/src/templates.html',
+        'static/templates.html',
     ],
    'assets': {
         'web.assets_backend': [
