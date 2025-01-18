@@ -26,12 +26,13 @@
         'views/views.xml',
         'views/report_layout_inherit.xml',
     ],
-       'assets': {
+   'assets': {
         'web.assets_backend': [
             '/n2d_logo_full_header/static/src/img/invoice.png',
             '/n2d_logo_full_header/static/src/bannar.jpeg',
             '/n2d_logo_full_header/static/src/Hintegration.png',
         ],
+       },
 
     'price': '5.00',
 
