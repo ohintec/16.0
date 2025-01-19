@@ -26,6 +26,7 @@
         'views/views.xml',
         'views/report_layout_inherit.xml',
     ],
+    'images': ['static/description/cover.png'],
 
     'price': '5.00',
 
