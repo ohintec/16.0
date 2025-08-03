@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_order_form_inherit_validation" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.validation</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Add Validate Button -->
+            <xpath expr="//button[@name='action_quotation_send']" position="before">
+                <button name="action_validate_quotation"
+                        string="Validate"
+                        type="object"
+                        invisible="state != 'draft'"
+                        class="btn-primary"
+                        groups="n2d_validation_workflow.group_validation_manager"/>
+            </xpath>
+            
+            <!-- Make Send by Email button only visible in validated state -->
+            <xpath expr="//button[@name='action_quotation_send']" position="attributes">
+                <attribute name="invisible">state != 'validated'</attribute>
+            </xpath>
+            
+            <!-- Make first Confirm button visible only in validated state and only for sales administrators -->
+            <xpath expr="//header/button[@name='action_confirm'][1]" position="attributes">
+                <attribute name="invisible">state != 'validated'</attribute>
+                <attribute name="groups">sales_team.group_sale_manager</attribute>
+            </xpath>
+            
+            <!-- Add Reset to Draft button in validated state -->
+            <xpath expr="//header/button[@name='action_confirm'][1]" position="before">
+                <button name="action_reset_to_draft"
+                        string="Reset to Draft"
+                        type="object"
+                        invisible="state != 'validated'"
+                        groups="sales_team.group_sale_manager"
+                        class="btn-secondary"/>
+            </xpath>
+            
+            <!-- Hide any additional Confirm buttons completely -->
+            <xpath expr="//header/button[@name='action_confirm'][2]" position="replace">
+            </xpath>
+
+            <!-- Add Validated to header state display -->
+            <xpath expr="//field[@name='state']" position="attributes">
+                <attribute name="readonly">True</attribute>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

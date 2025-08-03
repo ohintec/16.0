@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Create Validation Manager group -->
+        <record id="group_validation_manager" model="res.groups">
+            <field name="name">Sales Validation Manager</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+            <field name="comment">Users in this group can validate sales quotations.</field>
+        </record>
+    </data>
+</odoo>

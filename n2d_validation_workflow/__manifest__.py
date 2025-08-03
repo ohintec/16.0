@@ -1,0 +1,31 @@
+
+{
+    'name': "n2d_validation_workflow",
+    'summary': "Sales Validation Workflow",
+    'description': "This module is used to validate sales quotations before they are sent or confirmed.",
+    'author': "hintegration",
+    'website': "https://www.ohint.net",
+    'price': 15,
+    'currency': 'USD',
+    'category': "Sales",
+    'version': "1.0",
+    'depends': ['base', 'sale'],
+    'data': [
+         'security/security.xml',
+         'security/ir.model.access.csv',
+         'views/views.xml',
+    ],
+ 'images': ['static/description/icon.png',
+            'static/description/image1.png',
+            'static/description/image2.png', 
+            'static/description/image3.png', 
+            'static/description/image4.png',
+            'static/description/image5.png',
+            'static/description/image6.png', 
+            'static/description/image7.png'],
+  'license': 'AGPL-3',
+    'installable': True,
+    'auto_install': False,
+    'application': True,
+
+}
